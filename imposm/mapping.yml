@@ -4,19 +4,27 @@ areas:
 generalized_tables:
   landusages_gen0:
     source: landusages_gen1
-    sql_filter: ST_Area(geometry)>500000.000000
-    tolerance: 200.0
+    sql_filter: ST_Area(geometry)>16000000
+    tolerance: 2000.0
   landusages_gen1:
     source: landusages
-    sql_filter: ST_Area(geometry)>50000.000000
-    tolerance: 50.0
+    sql_filter: ST_Area(geometry)>4000000
+    tolerance: 1000.0
+  landusages_gen2:
+    source: landusages
+    sql_filter: ST_Area(geometry)>1000000
+    tolerance: 500.0
+  landusages_gen3:
+    source: landusages
+    sql_filter: ST_Area(geometry)>60000
+    tolerance: 125.0
   waterareas_gen0:
     source: waterareas_gen1
-    sql_filter: ST_Area(geometry)>500000.000000
+    sql_filter: ST_Area(geometry)>500000
     tolerance: 200.0
   waterareas_gen1:
     source: waterareas
-    sql_filter: ST_Area(geometry)>50000.000000
+    sql_filter: ST_Area(geometry)>50000
     tolerance: 50.0
   waterways_gen0:
     source: waterways_gen1
@@ -52,6 +60,12 @@ tables:
     - key: name
       name: name
       type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
+      type: string
     - name: type
       type: mapping_value
     - key: admin_level
@@ -86,6 +100,12 @@ tables:
       type: geometry
     - key: name
       name: name
+      type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
       type: string
     - key: access
       name: access
@@ -325,6 +345,12 @@ tables:
     - key: name
       name: name
       type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
+      type: string
     - name: type
       type: mapping_value
     mapping:
@@ -355,6 +381,12 @@ tables:
     - key: name
       name: name
       type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
+      type: string
     - name: type
       type: mapping_value
     mapping:
@@ -381,6 +413,12 @@ tables:
       type: geometry
     - key: name
       name: name
+      type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
       type: string
     - name: type
       type: mapping_value
@@ -466,6 +504,12 @@ tables:
       type: geometry
     - key: name
       name: name
+      type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
       type: string
     - name: type
       type: mapping_value
@@ -648,6 +692,12 @@ tables:
     - key: name
       name: name
       type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
+      type: string
     - name: type
       type: mapping_value
     - key : capital
@@ -698,6 +748,12 @@ tables:
       type: string
     - key: name
       name: name
+      type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
       type: string
     - key: tunnel
       name: tunnel
@@ -819,6 +875,12 @@ tables:
     - key: name
       name: name
       type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
+      type: string
     - name: type
       type: mapping_value
     mapping:
@@ -839,6 +901,12 @@ tables:
       type: geometry
     - key: name
       name: name
+      type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
       type: string
     - name: type
       type: mapping_value
@@ -872,6 +940,12 @@ tables:
     - key: name
       name: name
       type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
+      type: string
     - name: type
       type: mapping_value
     - name: area
@@ -900,6 +974,12 @@ tables:
       type: geometry
     - key: name
       name: name
+      type: string
+    - key: name:en
+      name: name_en
+      type: string
+    - key: int_name
+      name: int_name
       type: string
     - name: type
       type: mapping_value
